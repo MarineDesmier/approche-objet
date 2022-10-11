@@ -8,7 +8,7 @@ public class TestAdressePostale {
 	
 		AdressePostale adresse2 = new AdressePostale(594, "Chemin de la grande gibode", 01140, "Saint didier sur Chalaronne");		
 	
-		
+		System.out.println(AdressePostale.getPays());
 	}
 
 }
