@@ -1,8 +1,13 @@
 package exemple;
 
+//Peut se lire "est aussi"
 public class Avion extends Vehicule {
 	
 	private String matricule;
+	
+	public Avion(String marque, String modele) {
+		super(marque, modele);
+	}
 	
 	@Override
 	public void demarrer() {

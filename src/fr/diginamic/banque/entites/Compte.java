@@ -1,6 +1,6 @@
 package fr.diginamic.banque.entites;
 
-public class Compte {
+public abstract class Compte {
 
 	private int numero;
 	private double solde;
@@ -10,7 +10,9 @@ public class Compte {
 		this.numero = numeroCompte;
 		this.solde = soldeCompte;
 	}
-
+	
+	public abstract void afficherInfos();
+	
 	// méthode toString
 	public String toString() {
 		return "Numéro de compte : "+numero+ " "+ "Ton solde est de "+solde+" €";
