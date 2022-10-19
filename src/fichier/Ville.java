@@ -24,6 +24,11 @@ public class Ville {
 	public String toString() {
 		return "Ville = " + nom + ", code Département = " + codeDep + ", nom Région = " + nomRegion + ", population Total = " + popTotal;
 	}
+	
+	
+	public String toString2() {
+		return "Ville = " + nom + ", code Département = " + codeDep + ", nom Région = " + nomRegion + ", population Total = " + popTotal;
+	}
 
 	public String getNom() {
 		return nom;
@@ -56,6 +61,6 @@ public class Ville {
 	public void setPopTotal(int popTotal) {
 		this.popTotal = popTotal;
 	}
-	
-	
+
+		
 }

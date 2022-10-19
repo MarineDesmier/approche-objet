@@ -24,6 +24,7 @@ public class LectureFichier {
 		// tableau vide
 		List<Ville> listeVille = new ArrayList<>();
 		
+		// boucle pour toute les villes
 		for(int i = 1; i < afficheTxt.size(); i++) {
 			String[] ville = afficheTxt.get(i).split(";");
 			String nom = ville[6];
@@ -31,9 +32,37 @@ public class LectureFichier {
 			String region = ville[1];
 			String departement = ville[0];
 			
+			// création d'une ville 
 			Ville v = new Ville(nom, departement, region, population);
 			listeVille.add(v);
 			System.out.println(listeVille.get(i-1));
 		}
+//		
+//		// On doit lire le contenu de la liste avant de copier
+//		List<String> lines = Files.readAllLines(path, StandardCharsets.UTF_8);
+//		
+		// afficher les villes de plus de 25 000 habitants
+		List<Ville> villeSup = new ArrayList<>();
+			for(int i = 0; i < listeVille.size(); i++) { 
+				Ville v = listeVille.get(i);
+				if(v.getPopTotal() > 25000) {
+					villeSup.add(v);
+				}
+			}
+			
+			
+		// création de la copie
+		Path pathVille = Paths.get("D:\\Documents\\coursWeb\\Diginamic\\CoursJava\\Java-Richard\\tpRecensement\\recensementVilleSup25K.csv");
+		
+		
+		// Créer une liste de string
+		List<String> liste = new ArrayList<>();
+		liste.add("Nom ville, département, région, nombre total d'habitant");
+		for(int i = 0; i < listeVille.size(); i++) {
+			Ville v = listeVille.get(i);
+			liste.add(v.toString2());
+		}
+		
+		Files.write(pathVille, liste);
 	}
 }
