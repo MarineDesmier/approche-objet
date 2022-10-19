@@ -34,7 +34,7 @@ public class TestCalendar {
 		String dateFormateRu = formateRu.format(dateJour);
 		System.out.println(dateFormateRu);
 		
-		SimpleDateFormat formateChi = new SimpleDateFormat("dd MMMM yyyy HH:mm:ss", new Locale("zh", "ZH"));
+		SimpleDateFormat formateChi = new SimpleDateFormat("dd MMMM yyyy HH:mm:ss", new Locale("zh", "CN"));
 		String dateFormateChi = formateChi.format(dateJour);
 		System.out.println(dateFormateChi);
 		
