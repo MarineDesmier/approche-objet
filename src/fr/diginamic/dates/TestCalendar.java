@@ -24,21 +24,21 @@ public class TestCalendar {
 		System.out.println(dateJour);
 		
 		// Affichez l’instance ainsi créée au format suivant : année/mois/jour heure:minute:seconde
-		SimpleDateFormat formater2 = new SimpleDateFormat("'Le' dd MMMM yyyy 'à' HH:mm:ss");
+		SimpleDateFormat formater2 = new SimpleDateFormat("'Le' EEEE dd MMMM yyyy 'à' HH:mm:ss");
 		String dateFormate2 = formater2.format(dateJour);
 		System.out.println(dateFormate2);
 		
 		// Affichez la même instance avec le nom des jours et des mois en français, russe, chinois et allemand
 		
-		SimpleDateFormat formateRu = new SimpleDateFormat("dd MMMM yyyy HH:mm:ss", new Locale("ru", "RU"));
+		SimpleDateFormat formateRu = new SimpleDateFormat("EEEE dd MMMM yyyy HH:mm:ss", new Locale("ru", "RU"));
 		String dateFormateRu = formateRu.format(dateJour);
 		System.out.println(dateFormateRu);
 		
-		SimpleDateFormat formateChi = new SimpleDateFormat("dd MMMM yyyy HH:mm:ss", new Locale("zh", "CN"));
+		SimpleDateFormat formateChi = new SimpleDateFormat("EEEE dd MMMM yyyy HH:mm:ss", new Locale("zh", "CN"));
 		String dateFormateChi = formateChi.format(dateJour);
 		System.out.println(dateFormateChi);
 		
-		SimpleDateFormat formateAll = new SimpleDateFormat("dd MMMM yyyy HH:mm:ss", new Locale("de", "DE"));
+		SimpleDateFormat formateAll = new SimpleDateFormat("EEEE dd MMMM yyyy HH:mm:ss", new Locale("de", "DE"));
 		String dateFormateAll = formateAll.format(dateJour);
 		System.out.println(dateFormateAll);
 		
